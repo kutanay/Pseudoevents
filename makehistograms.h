@@ -97,11 +97,11 @@ makehistograms::makehistograms(TTree *tree) : fChain(0)
 // if parameter tree is not specified (or zero), connect the file
 // used to generate this class and read the Tree.
    if (tree == 0) {
-      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/eos/user/t/takumar/hgcal/module_dist/CMSSW_13_3_0_pre5/src/PseudoNtuple_Correlated_D86_21072022_1M_covMatrix.root");
+      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/eos/user/t/takumar/hgcal/module_dist//PseudoNtuple_Correlated_D86_21072022_1M_covMatrix.root");
       if (!f || !f->IsOpen()) {
-         f = new TFile("/eos/user/t/takumar/hgcal/module_dist/CMSSW_13_3_0_pre5/src/PseudoNtuple_Correlated_D86_21072022_1M_covMatrix.root");
+         f = new TFile("/eos/user/t/takumar/hgcal/module_dist/PseudoNtuple_Correlated_D86_21072022_1M_covMatrix.root");
       }
-      TDirectory * dir = (TDirectory*)f->Get("/eos/user/t/takumar/hgcal/module_dist/CMSSW_13_3_0_pre5/src/PseudoNtuple_Correlated_D86_21072022_1M_covMatrix.root:/beLinksNTuple");
+      TDirectory * dir = (TDirectory*)f->Get("/eos/user/t/takumar/hgcal/module_dist/PseudoNtuple_Correlated_D86_21072022_1M_covMatrix.root:/beLinksNTuple");
       dir->GetObject("EventTree",tree);
 
    }
