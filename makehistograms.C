@@ -56,7 +56,7 @@ void makehistograms::Loop(int id)
       
 		string path = "", name10[max],name20[max],name30[max];
 
-      string file = "/eos/user/t/takumar/hgcal/module_dist/CMSSW_13_3_0_pre5/src/histograms/distribution_"+to_string(id)+".root";
+      string file = "/eos/user/t/takumar/hgcal/module_dist/histograms/distribution_"+to_string(id)+".root";
 
       TFile* f = new TFile(file.c_str(),"Recreate");
 
